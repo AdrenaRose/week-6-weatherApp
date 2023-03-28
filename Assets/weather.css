@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  margin: auto;
+  font-size: 36px;
+}
+
+.citySearch {
+  height: 100%;
+}
+
+.card {
+  display: inline;
+  margin-inline: 4px;  
+}
