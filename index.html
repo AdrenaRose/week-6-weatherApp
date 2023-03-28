@@ -18,27 +18,38 @@
     </header>
     <div class="container text-center">
       <div class="row">
-        <div class="col-md-4">City Search</div>
-        <label for="exampleDataList" class="form-label">Datalist example</label>
-        <input
-          class="form-control"
-          list="datalistOptions"
-          id="exampleDataList"
-          placeholder="Type to search..."
-        />
-        <datalist id="datalistOptions">
-          <option value="San Francisco"></option>
-          <option value="New York"></option>
-          <option value="Seattle"></option>
-          <option value="Los Angeles"></option>
-          <option value="Chicago"></option>
-        </datalist>
-        <div class="col-md-8">Current Day</div>
+        <div class="col-md-4">
+          <form>
+            <div class="mb-3">
+              <label for="cityInput" class="form-label"
+                >Search for a City:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="cityInput"
+                aria-describedby="city-Search"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+          <hr />
+          <div id="search-history"></div>
+        </div>
+        <div class="col-md-8">
+          <h1>Current Day</h1>
+          <br />
+          <p class="temp">Temp</p>
+          <br />
+          <p class="wind">Wind</p>
+          <br />
+          <p class="humidity">Humidity</p>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-8">
           <h1>Five Day</h1>
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 15rem">
             <div class="card-body">
               <h5 class="card-title">Date</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -54,7 +65,7 @@
               </div>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 15rem">
             <div class="card-body">
               <h5 class="card-title">Date</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -70,7 +81,7 @@
               </div>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 15rem">
             <div class="card-body">
               <h5 class="card-title">Date</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -86,7 +97,7 @@
               </div>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 15rem">
             <div class="card-body">
               <h5 class="card-title">Date</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -102,7 +113,7 @@
               </div>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 15rem">
             <div class="card-body">
               <h5 class="card-title">Date</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">
