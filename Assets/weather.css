@@ -1,14 +1,53 @@
+body {
+  background-color: #2e94b9;
+  color: #f0fbff;
+}
+
 .title {
   text-align: center;
-  margin: auto;
+  margin: 15px auto;
   font-size: 36px;
 }
 
 .citySearch {
-  height: 100%;
+  height: 500px;
+  border: 5px solid black;
+  background-color: #acdcee;
+  color: #475053;
+}
+
+.form-label {
+  font-size: 24px;
+  margin-block: 4px;
+  font-weight: 700;
+}
+
+.today {
+  border: 5px solid black;
+  background-color: #acdcee;
+  color: #475053;
 }
 
 .card {
-  display: inline;
-  margin-inline: 4px;  
+  border: 5px solid #acdcee;
+}
+
+.forecast {
+  justify-content: space-evenly;
+}
+
+.first-color {
+  background: #2e94b9;
+}
+
+.second-color {
+  background: #475053;
+}
+
+.third-color {
+  background: #acdcee;
+}
+
+.fourth-color {
+  background: #f0fbff;
 }
