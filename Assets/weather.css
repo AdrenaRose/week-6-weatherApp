@@ -16,10 +16,10 @@ body {
   color: #475053;
 }
 
-.form-label {
-  font-size: 24px;
-  margin-block: 4px;
-  font-weight: 700;
+#cityInput {
+  display: inline;
+  width: 80%;
+  margin-top: 5px;
 }
 
 .today {
