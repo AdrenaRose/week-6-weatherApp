@@ -1,25 +1,15 @@
+let apiKey = "ac3f111a6c43635ae1941078ccac0b18";
 let fetchButton = document.getElementById("search-button");
 let searchHistory = document.getElementById("search-history");
 
-function getLatLong(){
-  let 
-}
+document.getElementById("search-button").addEventListener("click", getApi);
 
 function getApi() {
   let requestUrl =
-    "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=ac3f111a6c43635ae1941078ccac0b18";
-
+    "https://api.openweathermap.org/data/2.5/weather?q=Richmond&units=imperial&appid=ac3f111a6c43635ae1941078ccac0b18";
   fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-      // for(var i = 0; i < data.length; i++)
-      // {
-
-      // }
-    });
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 }
 
-fetchButton.addEventListener("click", getApi);
+// document.querySelector(".btn").addEventListener("click", getApi);
