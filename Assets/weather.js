@@ -2,7 +2,7 @@ let apiKey = "ac3f111a6c43635ae1941078ccac0b18";
 let fetchButton = document.getElementById("search-button");
 let searchHistory = document.getElementById("search-history");
 
-document.getElementById("search-button").addEventListener("click", doClicky);
+document.getElementById("search-button").addEventListener("click", clickEvent);
 
 function getWeather() {
   let city = document.getElementById("cityInput").value;
@@ -11,41 +11,26 @@ function getWeather() {
     city +
     "&units=imperial&appid=" +
     apiKey;
-  fetch(weatherUrl).then(function (response) {
-    return response.json();
+  fetch(weatherUrl)
+    .then(function (response) {
+      return response.json();
     })
     .then(function displayWeather(data) {
-  let { name } = data;
-  let { description, icon } = data.weather[0];
-  let { temp, humidity } = data.main;
-  let { speed } = data.wind;
-  console.log(name, icon, description, temp, humidity, speed);
-});
+      let { name } = data;
+      let { description, icon } = data.weather[0];
+      let { temp, humidity } = data.main;
+      let { speed } = data.wind;
+      document.getElementById("currentTemp").innerHTML = "Current Temperature in " + city + " is " + Math.round(temp) + "°F";
+      document.getElementById("currentWindspeed").innerHTML = "Windspeed is " + Math.round(speed) + " MPH";
+      document.getElementById("currentHumidity").innerHTML = "Humidity is " + humidity + "%";
+      console.log(name, icon, description, temp, humidity, speed);
+    });
 }
 
-function doClicky() {
+function clickEvent() {
   // document.getElementById("cityInput").value;
   getWeather();
 }
-
-// let weather = {
-//   getWeather: function (city) {
-//     city = document.getElementById("cityInput").value;
-//     fetch(weatherUrl)
-//       .then((response) => response.json())
-//       .then((data) => this.displayWeather(data));
-//   },
-
-//   displayWeather: function (data) {
-//     let { name } = data;
-//     let { icon, description } = data.weather[0];
-//     let { temp, humidity } = data.main;
-//     let { speed } = data.wind;
-//     console.log(name, icon, description, temp, humidity, speed);
-//   },
-// };
-
-// document.getElementById("search-button").addEventListener("click", getWeather);
 
 function getForecast() {
   let forecastUrl =
@@ -55,4 +40,4 @@ function getForecast() {
     .then((data) => console.log(data));
 }
 
-getForecast()
+getForecast();
