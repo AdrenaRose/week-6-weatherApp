@@ -12,5 +12,12 @@ function getApi() {
 
 document.getElementById("search-button").addEventListener("click", getApi);
 
-console.log(document.getElementById("search-button"));
-// document.querySelector(".btn").addEventListener("click", getApi);
+function getForecast() {
+  let forecastUrl =
+    "https://api.openweathermap.org/data/2.5/forecast/daily?q=Richmond&cnt=5&appid=ac3f111a6c43635ae1941078ccac0b18";
+  fetch(forecastUrl)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+}
+
+getForecast();
