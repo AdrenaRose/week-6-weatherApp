@@ -23,6 +23,7 @@ function getWeather() {
       document.getElementById("currentTemp").innerHTML = "Current Temperature in " + city + " is " + Math.round(temp) + "°F";
       document.getElementById("currentWindspeed").innerHTML = "Windspeed is " + Math.round(speed) + " MPH";
       document.getElementById("currentHumidity").innerHTML = "Humidity is " + humidity + "%";
+      document.getElementById("searchHistory").append(city);
       console.log(name, icon, description, temp, humidity, speed);
     });
 }
