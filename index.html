@@ -34,17 +34,17 @@
             <button type="button" id="search-button" class="btn btn-primary">
               Search
             </button>
+            <div id="searchHistory"></div>
           </form>
-          <div id="search-history"></div>
         </div>
-        <div class="today col-md-8">
+        <div class="col-md-8" id="today">
           <h1>Today's Forecast</h1>
           <br />
-          <p class="temp">Temp</p>
+          <p id="currentTemp"></p>
           <br />
-          <p class="wind">Wind</p>
+          <p id="currentWindspeed"></p>
           <br />
-          <p class="humidity">Humidity</p>
+          <p id="currentHumidity"></p>
         </div>
       </div>
       <div class="row">
@@ -135,7 +135,7 @@
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="Assets/weather.js"></script>
   </body>
 </html>
