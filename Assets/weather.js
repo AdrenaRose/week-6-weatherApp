@@ -63,7 +63,7 @@ function getForecast() {
       );
       getData(
         data,
-        dayjs().add(3, "day"),
+        dayjs().add(3, "day").subtract(12, "hour").unix(),
         "description3",
         "temp3",
         "windspeed3",
@@ -71,7 +71,7 @@ function getForecast() {
       );
       getData(
         data,
-        dayjs().add(4, "day"),
+        dayjs().add(4, "day").subtract(12, "hour").unix(),
         "description4",
         "temp4",
         "windspeed4",
@@ -79,7 +79,7 @@ function getForecast() {
       );
       getData(
         data,
-        dayjs().add(5, "day"),
+        dayjs().add(5, "day").subtract(12, "hour").unix(),
         "description5",
         "temp5",
         "windspeed5",
