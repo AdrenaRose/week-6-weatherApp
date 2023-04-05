@@ -50,13 +50,14 @@ function getForecast() {
     })
     .then(function displayForecast(data) {
       console.log(data);
-      for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < data.list.length; i++) {
         let date = data.list[i].dt;
-        // let { description, icon } = data.list[i].weather[0];
-        // let { temp, humidity } = data.list[i].main;
-        // let { speed } = data.list[i].wind;
-        if (date !== dayjs().format()) {
-          console.log("Hello");
+        let time = data.list[i].time;
+        let { description, icon } = data.list[i].weather[0];
+        let { temp, humidity } = data.list[i].main;
+        let { speed } = data.list[i].wind;
+        if (date !== dayjs().format() && time=== "12:00:00") {
+          console.log(description, icon);
         }
       }
     });
