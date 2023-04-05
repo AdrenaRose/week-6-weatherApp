@@ -98,8 +98,8 @@ function getData(data, dateToStopOn, descId, tempId, windId, humidId) {
       let { temp, humidity } = data.list[i].main;
       let { speed } = data.list[i].wind;
       document.getElementById(descId).innerHTML = description;
-      document.getElementById(tempId).innerHTML = temp;
-      document.getElementById(windId).innerHTML = speed;
+      document.getElementById(tempId).innerHTML = Math.round(temp) + "°F";
+      document.getElementById(windId).innerHTML = Math.round(speed) + "MPH";
       document.getElementById(humidId).innerHTML = humidity;
       return;
     }
