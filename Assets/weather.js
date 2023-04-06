@@ -63,7 +63,7 @@ function getForecast() {
       );
       getData(
         data,
-        dayjs().add(3, "day"),
+        dayjs().add(3, "day").subtract(12, "hour").unix(),
         "description3",
         "temp3",
         "windspeed3",
@@ -71,7 +71,7 @@ function getForecast() {
       );
       getData(
         data,
-        dayjs().add(4, "day"),
+        dayjs().add(4, "day").subtract(12, "hour").unix(),
         "description4",
         "temp4",
         "windspeed4",
@@ -79,7 +79,7 @@ function getForecast() {
       );
       getData(
         data,
-        dayjs().add(5, "day"),
+        dayjs().add(5, "day").subtract(12, "hour").unix(),
         "description5",
         "temp5",
         "windspeed5",
@@ -98,8 +98,8 @@ function getData(data, dateToStopOn, descId, tempId, windId, humidId) {
       let { temp, humidity } = data.list[i].main;
       let { speed } = data.list[i].wind;
       document.getElementById(descId).innerHTML = description;
-      document.getElementById(tempId).innerHTML = temp;
-      document.getElementById(windId).innerHTML = speed;
+      document.getElementById(tempId).innerHTML = Math.round(temp) + "°F";
+      document.getElementById(windId).innerHTML = Math.round(speed) + "MPH";
       document.getElementById(humidId).innerHTML = humidity;
       return;
     }
